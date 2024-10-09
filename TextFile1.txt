@@ -1,0 +1,73 @@
+﻿Understanding Data Types
+Test your Knowledge
+1. What type would you choose for the following “numbers”?
+A person’s telephone number
+	int	
+A person’s height
+	float
+A person’s age
+	int
+A person’s gender (Male, Female, Prefer Not To Answer)
+	enum
+A person’s salary
+	decimal
+A book’s ISBN
+	string
+A book’s price
+	double
+A book’s shipping weight
+	double
+A country’s population
+	long
+The number of stars in the universe
+	ulong
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)
+	Value types store the actual data and are stored on the stack. Examples: int, float, struct.
+Reference types store a reference to the data, which is stored on the heap. Examples: class, string, object.
+
+2. What are the difference between value type and reference type variables? What is
+boxing and unboxing?
+	Boxing: Converting a value type to an object or any interface type.
+Unboxing: Extracting the value type from the object.
+
+3. What is meant by the terms managed resource and unmanaged resource in .NET
+	Managed resources: Resources that are handled by the .NET runtime, like memory allocation for objects.
+Unmanaged resources: Resources not controlled by the .NET runtime, such as file handles, database connections, or unmanaged memory.
+
+4. Whats the purpose of Garbage Collector in .NET?
+	The Garbage Collector (GC) automatically manages memory by freeing up space occupied by objects that are no longer in use, ensuring that the system efficiently reclaims memory and avoids memory leaks.
+
+Controlling Flow and Converting Types
+Test your Knowledge
+1. What happens when you divide an int variable by 0?
+	DivideByZeroException
+2. What happens when you divide a double variable by 0?
+	PositiveInfinity or NegativeInfinity), or NaN (Not a Number) if the numerator is also 0. No exception is thrown.
+3. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+	When you overflow an int variable (e.g., exceeding the range of -2,147,483,648 to 2,147,483,647), it will wrap around to the opposite end of the range. For example, if you add 1 to int.MaxValue, it will become int.MinValue.
+4. What is the difference between x = y++; and x = ++y;?
+	x = y++; assigns the current value of y to x, then increments y after the assignment.
+x = ++y; increments y first and then assigns the incremented value to x
+5. What is the difference between break, continue, and return when used inside a loop
+statement?
+	break: Exits the loop immediately, stopping further iterations.
+continue: Skips the remaining code inside the current iteration and proceeds to the next iteration of the loop.
+return: Exits the current method and returns control to the calling method, effectively ending the method's execution.
+6. What are the three parts of a for statement and which of them are required?
+	The three parts of a for statement are:
+
+Initialization: Executed once at the start of the loop (e.g., int i = 0).
+Condition: Evaluated before each iteration; if true, the loop continues (e.g., i < 10).
+Iteration: Executed at the end of each loop iteration (e.g., i++). Only the condition is required; the other two can be omitted.
+7. What is the difference between the = and == operators?
+=: Assignment operator; used to assign a value to a variable.
+==: Equality operator; used to compare two values for equality.
+8. Does the following statement compile? for ( ; true; ) ;
+Yes, this statement compiles. It creates an infinite loop with no initialization or iteration expression. The loop will run indefinitely until externally terminated.
+9. What does the underscore _ represent in a switch expression?
+In a switch expression, the underscore _ acts as a discard pattern, which matches any value that has not been matched by previous patterns. It is often used as a default case to catch all unhandled values.
+10. What interface must an object implement to be enumerated over by using the foreach
+statement?
+An object must implement the IEnumerable interface (or IEnumerable<T> for generic collections) to be enumerated using the foreach statement.
